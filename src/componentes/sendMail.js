@@ -25,7 +25,7 @@ const SendMail = () => {
             const response = await axios.post(
                 '/users/sendMail', 
             { usuario, mailContent, asunto, numeroDeContacto },
-            { withCredentials: true } 
+             
             )
             console.log('respuesta del servidor',response)
             
