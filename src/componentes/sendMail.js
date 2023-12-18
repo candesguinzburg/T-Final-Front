@@ -30,7 +30,7 @@ const SendMail = () => {
               asunto,
               mailContent,
               numeroDeContacto
-            })
+            },{ withCredentials: true } )
             console.log('respuesta del servidor',response)
             
             alert('correo enviado correctamente')
