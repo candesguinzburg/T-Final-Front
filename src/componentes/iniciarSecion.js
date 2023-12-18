@@ -16,7 +16,7 @@ const IniciarSecion = () => {
     e.preventDefault()
 
     try {
-      const response = await axios.post("https://tfinal-b.vercel.app/users/login", {
+      const response = await axios.post("/users/login", {
         mail,
         password,
       })

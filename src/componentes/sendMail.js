@@ -21,7 +21,7 @@ const SendMail = () => {
 
         try{
             const response = await axios.post(
-                'https://tfinal-b.vercel.app/users/sendMail', 
+                '/users/sendMail', 
             { usuario, mailContent, asunto, numeroDeContacto },
             { withCredentials: true } 
             )
