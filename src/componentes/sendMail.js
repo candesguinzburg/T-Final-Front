@@ -14,19 +14,23 @@ const SendMail = () => {
     const navigate = useNavigate()
 
     const Resetear = () => {
-        setMailContent("")
+        setUsuario(""),
+        setAsunto(""),
+        setMailContent(""),
+        setNumeroDeContacto("")
     }
 
     const enviar = async (e) => {
         e.preventDefault()
         console.log(`enviaste este mail: ${mailContent}`)
 
-        try{
-            const response = await axios.post(
-                '/users/sendMail', 
-            { usuario, mailContent, asunto, numeroDeContacto },
-            { withCredentials: true } 
-            )
+        try {
+            const response = await axios.post("/users/sendMail", {
+              usuario,
+              asunto,
+              mailContent,
+              numeroDeContacto
+            })
             console.log('respuesta del servidor',response)
             
             alert('correo enviado correctamente')
