@@ -14,9 +14,9 @@ const SendMail = () => {
     const navigate = useNavigate()
 
     const Resetear = () => {
-        setUsuario(""),
-        setAsunto(""),
-        setMailContent(""),
+        setUsuario("")
+        setAsunto("")
+        setMailContent("")
         setNumeroDeContacto("")
     }
 
