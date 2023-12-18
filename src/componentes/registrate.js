@@ -1,9 +1,9 @@
 import "../css/iniciarSecion.css"
+import "../css/iniciarSecion.css"
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-axios.defaults.withCredentials = true
 const Registrate = () =>  {
 
     const [nombre, setNombre] = useState("")
@@ -89,4 +89,3 @@ const Registrate = () =>  {
 
 
 export default Registrate
-

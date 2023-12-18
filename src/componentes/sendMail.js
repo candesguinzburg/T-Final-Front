@@ -3,8 +3,6 @@ import axios from 'axios'
 import "../css/sendMail.css"
 import { useNavigate } from 'react-router-dom'
 
-
-axios.defaults.withCredentials = true
 const SendMail = () => {
     
     const [usuario, setUsuario] = useState('')
@@ -24,13 +22,12 @@ const SendMail = () => {
         e.preventDefault()
         console.log(`enviaste este mail: ${mailContent}`)
 
-        try {
-            const response = await axios.post("/users/sendMail", {
-              usuario,
-              asunto,
-              mailContent,
-              numeroDeContacto
-            } )
+        try{
+            const response = await axios.post(
+                '/users/sendMail', 
+            { usuario, mailContent, asunto, numeroDeContacto },
+            { withCredentials: true } 
+            )
             console.log('respuesta del servidor',response)
             
             alert('correo enviado correctamente')
