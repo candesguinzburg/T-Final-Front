@@ -20,7 +20,7 @@ const Registrate = () =>  {
         e.preventDefault()
         
         try{
-            const response = await axios.post('http://localhost:9000/users/create', {
+            const response = await axios.post('https://tfinal-b.vercel.app/users/create', {
                 nombre,
                 mail,
                 password
